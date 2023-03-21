@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau XML{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Charger un nouveau fichier XML</h1>
+    <div>
+      {{ form_start(form, { attr: { 'accept-charset' : 'utf-8' }}) }}
+          <div class="form-group">
+            {{ form_label(form.XmlFile) }}
+            {{ form_widget(form.XmlFile) }}
+            {{ form_errors(form.XmlFile) }}
+          </div>
+          <div class="form-group">
+            {{ form_widget(form.send, {'label': "télécharger", 'attr' : { 'class': 'btn btn-primary' }}) }}
+          </div>
+          {{ form_rest(form) }}
+        {{ form_end(form) }}
+        
+    </div>
+    {# <div>
+      {{ form_start(form) }}
+          {{ form_row(form.XmlFile) }}
+      {{ form_end(form) }}
+    </div> #}
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{movie.title}}{% endblock %}
+
+{% block body %}
+<h1>Détails du film {{movie.title}}</h1>
+<div>Genre : {{movie.genre}}</div>
+<div>Description : {{movie.description}}</div>
+<div>Réalisateur : {{movie.director}}</div>
+<div>Année de sortie : {{movie.year}}</div>
+<div>Durée : {{movie.runtime}} minutes</div>
+<div>Note : {{movie.rate}}</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}accueil{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Super Test</h1>
+
+    Merci de regarder ceci
+    <ul>
+        <li>Vous Pouvez vous arrêter là pour éviter le massacre</li>
+        <li><a href="{{ path('movie') }}">La liste des films</a></li>
+        <li><a href="{{ path('upload') }}">Charger un nouveau fichier XML</a></li>
+    </ul>
+    
+</div>
+{% endblock %}
